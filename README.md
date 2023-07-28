@@ -15,7 +15,7 @@ The data are separated into two directories:
 Make sure to put them in two separate directories called "2D" and "3D", respectively, and put the directories in one directory called "data".
 
 ## Directory structure
-To run the codes correctly, make a new directory called "result" and put "data" and "result" at the same layer as the directory of the codes.
+To run the codes correctly, make a new directory called "result" and put "data" and "result" at the same layer as the directory of the codes as below.
 ```
 .
 ├── This repository (codes)
