@@ -26,37 +26,34 @@ To run the codes correctly, make a new directory called "result" and put "data" 
 ```
 
 ## Machine environment
-### Velocity analysis
-The velosity simulation was conducted on MacBook Air.  
-- OS: macOS Big Sur 11.7.8
-- CPU: Intel(R) Core(TM) i5-1030NG7 CPU @ 1.10GHz  
-- RAM: 16GB
-
-All the other analyses were conducted on the same envinronemt as 3D analysis below.
-  
-### 3D analysis
 All the anlyses were conducted on Supermicro workstation (Super Micro Computer, Inc.).  
 - OS: Ubuntu 16.04.7 LTS  
 - CPU: Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz  
 - GPU: GeForce GTX TITAN X (NVIDIA)  
 - RAM: 125GB
+
 The 3D analyses require GPU for segmentation.
 
 The analyses have not been tested in other environments.  
-If you have any problem, feel free contanct us.
+If you have any problem, feel free to contanct us.
 
 ## Prerequisites
-All the analyses wew conducted using Python 3.8.  
+All the analyses were conducted using Python 3.8.  
 The following libraries are necessary to run the codes.  
-- numpy >1.23.3
-- pandas 2.0.3
-- matplotlib 3.7.2
-- seaborn 0.12.2
-- scikit-image 0.21.0
-- pyclesperanto-prototype 0.24.1
-- tifffile 2023.7.10
 - astropy 5.2.2
+- matplotlib 3.7.2
+- numpy 1.24.4
 - opencv-python 4.8.0
+- pandas 2.0.3
 - Pillow 10.0.0
-- trackpy 0.5.0
-- sympy 1.11.1
+- pyclesperanto-prototype 0.24.1
+- scikit-image 0.21.0
+- seaborn 0.12.2
+- sympy 1.12
+- tifffile 2023.7.10
+- trackpy 0.6.1 
+
+
+## Usage
+### Velocity analysis
+#### Flow velocity simulation for Figure 2c
