@@ -9,8 +9,6 @@ from skimage.filters import unsharp_mask
 
 import pyclesperanto_prototype as cle
 
-from cellpose import models, core
-from cellpose.io import logger_setup
 
 
 def segment(data, suffix, description, sigma_spot_detection, sigma_outline, rescaling_factor=1):

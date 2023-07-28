@@ -18,11 +18,6 @@ def get_affine_parameters(theta, pixelsize, mag, fps, v, F_indexmismatch, polari
     dim_flow_recon = int(np.ceil(dim_flow*scale_y + dim_height*scale_z*np.tan(np.abs(theta))))
     return T, dim_height_recon, dim_flow_recon
 
-def get_increased_y_scale(theta, F_indexmismatch):
-    scale_z = (F_indexmismatch * np.cos(theta)) #first dimension
-    increased_y_scale = scale_z*np.tan(np.abs(theta))
-    return increased_y_scale
-
 def calc_bg_ex_profiles(path_bg, path_ex, path_ex_bg, kernel_movmean):
     img_bg = np.float32(np.array(pilimage.open(path_bg)))
     img_ex = np.float32(np.array(pilimage.open(path_ex)))-np.float32(np.array(pilimage.open(path_ex_bg)))
