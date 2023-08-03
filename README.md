@@ -1,9 +1,17 @@
-# Custom-made codes of Yamashita et al., 2023, Small
+![アセット 23@300x](https://github.com/solabtokyo/Yamashita_et_al_2023/assets/36177990/d7b10624-899e-484b-a7c1-06996e35a14a)
 
-## Description
-This is a repository for custom-made codes of Yamashita et al., 2023, Small (doi: XXX).  
-Using these codes, velocity distributions and 3D morphological properties of nuclei are analyzed.  
-Also, figures and movies attached to the manuscript are created.  
+# High-throughput 3D imaging flow cytometry of adherent 3D cell cultures
+Minato Yamashita<sup>1</sup>†, Miu Tamamitsu<sup>1</sup>†, Hiromi Kirisako<sup>1</sup>, Yuki Goda<sup>1</sup>, Xiaoyao Chen<sup>1</sup>, Kazuki Hattori<sup>1</sup>\*, Sadao Ota<sup>1</sup>\*\*　　  
+**Affiliations:**　<sup>1</sup>Research Center for Advanced Science and Technology, The University of Tokyo, 4-6-1 Komaba, Meguro-ku, Tokyo, 153-8904, Japan
+
+\*Corresponding author. Email: kzkhattori@g.ecc.u-tokyo.ac.jp  
+\*\*Corresponding author. Email: sadaota@solab.rcast.u-tokyo.ac.jp  
+†These authors contributed equally to this work.  
+
+**Abstract:**  
+Three-dimensional (3D) cell cultures are indispensable in recapitulating in vivo environments. Among many 3D culture methods, the strategy to culture adherent cells on hydrogel beads to form spheroid-like structures is powerful for maintaining high cell viability and functions through an efficient supply of nutrients and oxygen. However, high-throughput, scalable technologies for 3D imaging of individual cells cultured on the hydrogel scaffolds are lacking. This study reports the development of a high-throughput, scalable 3D imaging flow cytometry (3D-iFCM) platform for analyzing spheroid models on hydrogel beads. This platform is realized by integrating a single objective lens-based fluorescence light-sheet microscopy with a microfluidic device employing a combination of hydrodynamic and acoustofluidic focusing techniques. This integration enabled an unprecedentedly high-throughput, robust optofluidic 3D imaging, processing 1,310 spheroids and 28,117 cells min-1. The large dataset obtained allows us to quantify and compare the nuclear morphology of adhering and suspended cells, revealing adhering cells have smaller nuclei with non-round surfaces. This platform's high throughput, robustness, and precision for analyzing the morphology of subcellular compartments in 3D culture models holds promising potential for various biomedical analyses, including image-based phenotypic screening of drugs with spheroids or organoids.
+
+**Paper:** https://www.biorxiv.org/content/10.1101/2023.07.10.548361v2
 
 ## Data
 First of all, data to analyze have to be downloaded to the local environment.  
@@ -19,11 +27,13 @@ To run the codes correctly, make a new directory called "result" and put "data" 
 ```
 .
 ├── This repository (codes)
-│          ├── Velocity_analysis
+│          ├── velocity_analysis
 │          └── 3D_analysis  
 ├── data
 │     ├── 2D
-│     └── 3D    
+│     └── 3D
+│          ├── raw
+│          └── calib    
 └── result
 ```
 
@@ -57,53 +67,65 @@ The following libraries are necessary to run the codes.
 
 
 ## Usage
+All the analysis codes for the paper are provided as jupyter notebooks (.ipynb).  
+All the necessary modules for the analyses are provided as python files (.py).  
+
+All the figures of the paper are created in the notebooks for the analyses or in the ones named "make-XXX.ipynb".
+
 ### Velocity analysis
 #### Flow velocity simulation for Figure 2c
-Run "Simulate-velocity_make-figure2c.ipynb".  
-A simulation to calculate a flow velocity distribution inside a microfluidic channel is performed and Fgure 2c is created.  
+- simulate-velocity_make-figure2c.ipynb
+
+A simulation assuming the Hagen–Poiseuille flow is performed.  
+A flow velocity distribution inside a microfluidic channel is calculated.  
 
 #### Veocity distribution for Figure 2f and Figure 2g
-First, run "calculate-velocity-position".  
-Velocities and positions of flowing objects are calculated.  
-Then, run "make-figure2fg.ipynb".  
-Figure 2f and Figure 2g are created.  
+- calculate-velocity-position.ipynb
 
-#### Movies for supplemental movies
-Run "make-suppl-movies".  
-Supplemental movies 3 to 6 are created.  
+Velocities and positions of flowing spheroids are calculated under the conditions where acoustic and hydrodynamic focusing on or off.  
+
+#### Movies for supplemental movies 3 to 6
+- make-suppl-movies.ipynb
+
+Movies (.mp4) of flowing spheroids under each condition are created.
 
 ### 3D analysis
 #### Effect of acoustic focusing for Figure 2e
-Run "make-figure2e.ipynb".  
-Images and a line plot for Figure 2e are created.  
+- make-figure2e.ipynb
+
+Fluorescence intensity is summed to show the effect of acoustic focusing.  
 
 #### 3D images acquired in one second for calculation of throughput and Figure 3
-_Figure 3a_  
-Run "make-figure3a.ipynb".  
-Time-series images for Figure 2a are created.  
+_Tiem-series figures for Figure 3a_  
+- make-figure3a.ipynb
 
-_Throughput, Figure 3b and Figure 3c_  
-First, run "reconstruct_limited-frames_throughput-figure3bc.ipynb".  
+Time-series, optically sectioned 2D images are serially shown.  
+
+_Reconstruction of 3D images for throughput calculation, Figure 3b and Figure 3c_  
+- reconstruct_limited-frames_throughput-figure3bc.ipynb
+
 3D images are reconstructed from a time series of optically sectioned 2D images acquired in one second.  
-- Throughput  
-To calculate the throughputs (cells and spheroids per second) using these images, run "analyze_throughput".  
-- Figure 3b and Figure 3c  
-Run "make-figure3bc.ipynb".  
-Figure 3b and 3D images for Figure 3c are created.  
+- analyze_throughput.ipynb
+
+Throughputs (cells and spheroids per second) using these 3D images are calculated.
+
+
 Figure 3c is created from these 3D images using Fiji.  
 
 #### Analysis of 3D morphological properties for Figure 4b
-First, run "reconstruct.ipynb".  
+- reconstruct.ipynb
+
 3D images of spheroids and suspended cells are reconstructed from a time series of optically sectioned 2D images.  
-Then, run "analyze-nucleus-spheroid.ipynb" and "analyze-nucleus-suspended.ipynb".  
-Morphological properties of nuclei are calculated and Figure 4b is created.  
+- analyze-nucleus-spheroid.ipynb
+- analyze-nucleus-suspended.ipynb
+
+Morphological properties of nuclei of spheroids and suspended cells are calculated.  
 
 #### Supplemental Figures S1 and S3
-Make sure to reconstrunct 3D images for Figure 4b beforehand.  
-Run "make-suppl1.ipynb" for Figure S1 and "make-suppl3.ipynb" for Figure S3.  
-Figure S1 and Figure S3 are created.  
+Make sure to reconstrunct 3D images for Figure 4b before running "make-XXX.ipynb".  
 
 ## Author
 Minato Yamashira  
 The University of Tokyo  
-© 2023 Minatoya Yamashita
+## License
+© 2023 The University of Tokyo, Sadao Ota Lab
