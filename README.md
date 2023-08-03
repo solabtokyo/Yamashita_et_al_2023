@@ -1,4 +1,11 @@
 ![アセット 23@300x](https://github.com/solabtokyo/Yamashita_et_al_2023/assets/36177990/d7b10624-899e-484b-a7c1-06996e35a14a)
+![Static Badge](https://img.shields.io/badge/Python-3-blue)  
+![Static Badge](https://img.shields.io/badge/3D_cell_culture-green)
+![Static Badge](https://img.shields.io/badge/Adherent_cell-green)
+![Static Badge](https://img.shields.io/badge/3D_imaging_flow_cytometry-green)
+![Static Badge](https://img.shields.io/badge/Acoustofluidics-green)
+![Static Badge](https://img.shields.io/badge/Light--sheet%20microscopy-green)
+![Static Badge](https://img.shields.io/badge/Hydrogel_bead-green)
 
 # High-throughput 3D imaging flow cytometry of adherent 3D cell cultures
 Minato Yamashita<sup>1</sup>†, Miu Tamamitsu<sup>1</sup>†, Hiromi Kirisako<sup>1</sup>, Yuki Goda<sup>1</sup>, Xiaoyao Chen<sup>1</sup>, Kazuki Hattori<sup>1</sup>\*, Sadao Ota<sup>1</sup>\*\*　　  
