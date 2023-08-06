@@ -22,7 +22,7 @@ Three-dimensional (3D) cell cultures are indispensable in recapitulating in vivo
 
 ## Data
 First of all, data to analyze have to be downloaded to the local environment.  
-The original data are found on BioStudies (XXX).  
+The original data are found on BioImage Archive (https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BIAD831).  
 The data are separated into two directories:
 - 2D images to analyze velocity dstributions
 - 3D images (raw files and calibration-related files) to analyze the effect of acoustic focusing and morphological properties of nuclei
