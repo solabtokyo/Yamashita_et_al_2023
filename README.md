@@ -1,4 +1,4 @@
-![figure_3c@300x](https://github.com/solabtokyo/Yamashita_et_al_2023/assets/36177990/a97757c7-e0d8-433f-8aab-176a496aceb1)
+![github](https://github.com/solabtokyo/Yamashita_et_al_2023/assets/36177990/e085c0fe-4d11-449f-bc3a-5c0f04f5ea86)
 ![Static Badge](https://img.shields.io/badge/Python-3-blue)  
 ![Static Badge](https://img.shields.io/badge/3D_cell_culture-blue)
 ![Static Badge](https://img.shields.io/badge/Adherent_cell-blue)
