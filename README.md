@@ -18,7 +18,11 @@ Minato Yamashita<sup>1</sup>†, Miu Tamamitsu<sup>1</sup>†, Hiromi Kirisako<s
 **Abstract:**  
 3D cell cultures are indispensable in recapitulating in vivo environments. Among the many 3D culture methods, culturing adherent cells on hydrogel beads to form spheroid-like structures is a powerful strategy for maintaining high cell viability and functions in the adherent states. However, high-throughput, scalable technologies for 3D imaging of individual cells cultured on the hydrogel scaffolds are lacking. This study reports the development of a high throughput, scalable 3D imaging flow cytometry platform for analyzing spheroid models. This platform is realized by integrating a single objective fluorescence light-sheet microscopy with a microfluidic device that combines hydrodynamic and acoustofluidic focusing techniques. This integration enabled unprecedentedly high-throughput and scalable optofluidic 3D imaging, processing 1310 spheroids consisting of 28 117 cells min<sup>−1</sup>. The large dataset obtained enables precise quantification and comparison of the nuclear morphology of adhering and suspended cells, revealing that the adhering cells have smaller nuclei with less rounded surfaces. This platform's high throughput, robustness, and precision for analyzing the morphology of subcellular structures in 3D culture models hold promising potential for various biomedical analyses, including image-based phenotypic screening of drugs with spheroids or organoids.
 
-**Paper:** https://www.biorxiv.org/content/10.1101/2023.07.10.548361v2
+**Paper:** 
+High-Throughput 3D Imaging Flow Cytometry of Suspended Adherent 3D Cell Cultures
+Minato Yamashita, Miu Tamamitsu, Hiromi Kirisako, Yuki Goda, Xiaoyao Chen, Kazuki Hattori, Sadao Ota
+Small Methods, 2023
+https://onlinelibrary.wiley.com/doi/10.1002/smtd.202301318
 
 ## Data
 First of all, data to analyze have to be downloaded to the local environment.  
