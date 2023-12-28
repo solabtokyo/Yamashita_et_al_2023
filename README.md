@@ -132,6 +132,11 @@ Throughputs (cells and spheroids per second) using these 3D images are calculate
 
 Figure 3c is created from these 3D images using Fiji.  
 
+#### Create images for Figure 4a  
+- make-figure4a.ipynb
+
+Original images and segmented images are cropped for Figure 4a.
+
 #### Analysis of 3D morphological properties for Figure 4b
 - reconstruct.ipynb
 
