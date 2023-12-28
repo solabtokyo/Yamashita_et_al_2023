@@ -16,9 +16,13 @@ Minato Yamashita<sup>1</sup>†, Miu Tamamitsu<sup>1</sup>†, Hiromi Kirisako<s
 †These authors contributed equally to this work.  
 
 **Abstract:**  
-Three-dimensional (3D) cell cultures are indispensable in recapitulating in vivo environments. Among many 3D culture methods, the strategy to culture adherent cells on hydrogel beads to form spheroid-like structures is powerful for maintaining high cell viability and functions through an efficient supply of nutrients and oxygen. However, high-throughput, scalable technologies for 3D imaging of individual cells cultured on the hydrogel scaffolds are lacking. This study reports the development of a high-throughput, scalable 3D imaging flow cytometry (3D-iFCM) platform for analyzing spheroid models on hydrogel beads. This platform is realized by integrating a single objective lens-based fluorescence light-sheet microscopy with a microfluidic device employing a combination of hydrodynamic and acoustofluidic focusing techniques. This integration enabled an unprecedentedly high-throughput, robust optofluidic 3D imaging, processing 1,310 spheroids and 28,117 cells min<sup>-1</sup>. The large dataset obtained allows us to quantify and compare the nuclear morphology of adhering and suspended cells, revealing adhering cells have smaller nuclei with non-round surfaces. This platform's high throughput, robustness, and precision for analyzing the morphology of subcellular compartments in 3D culture models holds promising potential for various biomedical analyses, including image-based phenotypic screening of drugs with spheroids or organoids.
+3D cell cultures are indispensable in recapitulating in vivo environments. Among the many 3D culture methods, culturing adherent cells on hydrogel beads to form spheroid-like structures is a powerful strategy for maintaining high cell viability and functions in the adherent states. However, high-throughput, scalable technologies for 3D imaging of individual cells cultured on the hydrogel scaffolds are lacking. This study reports the development of a high throughput, scalable 3D imaging flow cytometry platform for analyzing spheroid models. This platform is realized by integrating a single objective fluorescence light-sheet microscopy with a microfluidic device that combines hydrodynamic and acoustofluidic focusing techniques. This integration enabled unprecedentedly high-throughput and scalable optofluidic 3D imaging, processing 1310 spheroids consisting of 28 117 cells min<sup>−1</sup>. The large dataset obtained enables precise quantification and comparison of the nuclear morphology of adhering and suspended cells, revealing that the adhering cells have smaller nuclei with less rounded surfaces. This platform's high throughput, robustness, and precision for analyzing the morphology of subcellular structures in 3D culture models hold promising potential for various biomedical analyses, including image-based phenotypic screening of drugs with spheroids or organoids.
 
-**Paper:** https://www.biorxiv.org/content/10.1101/2023.07.10.548361v2
+**Paper:**  
+High-Throughput 3D Imaging Flow Cytometry of Suspended Adherent 3D Cell Cultures  
+Minato Yamashita, Miu Tamamitsu, Hiromi Kirisako, Yuki Goda, Xiaoyao Chen, Kazuki Hattori, Sadao Ota  
+Small Methods, 2023  
+https://onlinelibrary.wiley.com/doi/10.1002/smtd.202301318  
 
 ## Data
 First of all, data to analyze have to be downloaded to the local environment.  
@@ -38,6 +42,8 @@ To run the codes correctly, make a new directory called "result" and put "data" 
 │          └── 3D_analysis  
 ├── data
 │     ├── 2D
+│     │    ├── uniformity  
+│     │    └── long  
 │     └── 3D
 │          ├── raw
 │          └── calib    
@@ -87,9 +93,16 @@ A simulation assuming the Hagen–Poiseuille flow is performed.
 A flow velocity distribution inside a microfluidic channel is calculated.  
 
 #### Veocity distribution for Figure 2f and Figure 2g
-- calculate-velocity-position.ipynb
+- calculate-velocity-position_uniformity.ipynb
+- make-figure2fg.ipynb
 
 Velocities and positions of flowing spheroids are calculated under the conditions where acoustic and hydrodynamic focusing on or off.  
+
+### Stability of velocitties for Figures S1
+- calculate-velocity-position_long.ipynb
+- make-suppl1.ipynb
+
+Velocities of flowing spheroids are calculated at the timepoints, 0 min and 5 min. 
 
 #### Movies for supplemental movies 3 to 6
 - make-suppl-movies.ipynb
@@ -128,7 +141,7 @@ Figure 3c is created from these 3D images using Fiji.
 
 Morphological properties of nuclei of spheroids and suspended cells are calculated.  
 
-#### Supplemental Figures S1 and S3
+#### Supplemental Figures S2 and S4
 Make sure to reconstrunct 3D images for Figure 4b before running "make-XXX.ipynb".  
 
 ## Author
